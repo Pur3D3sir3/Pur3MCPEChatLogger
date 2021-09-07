@@ -1,0 +1,7 @@
+---
+name: Pur3MCPE Chat Logger
+version: 1.0.0
+main: Pur3\Pur3MCPEChatLogger\Main
+api:
+- 3.0.0
+...
