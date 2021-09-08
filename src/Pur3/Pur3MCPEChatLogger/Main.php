@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener{
     public function onPlayerCommandPreprocess(PlayerCommandPreprocessEvent $event){
         $player = $event->getPlayer();
         $message = $event->getMessage();
-        if($message[0] === ""){
+         if($message[0] === '/[A-Za-z].*[0-9]|[0-9].*[A-Za-z]/'){
             $consoleMessage = str_replace(["{player}", "{command}"], [$player->getName(), $message], self::$config["formats"]["console-message"]);
             $discordMessage = str_replace(["{player}", "{command}"], [$player->getName(), $message], self::$config["formats"]["discord-message"]);
             if(self::$config["settings"]["console"] === true && self::$config["settings"]["discord"] !== true){
